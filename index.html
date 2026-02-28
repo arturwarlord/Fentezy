@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO -->
+    <meta name="description" content="Краткое описание вашего сайта (до 160 символов)">
+    <meta name="keywords" content="морепродукты, фрукты, орехи, доставка">
+    <meta name="author" content="Название компании">
+    
+    <!-- Индексация -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Цвет темы (для мобильных браузеров) -->
+    <meta name="theme-color" content="#8B5E3C">
+    
+    <!-- Иконка сайта -->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Оптимизация шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title>Фэнтэзи Букет</title>
+</head>
+<body>
+
+    <div class="page-content">
+    <header class="header" style="margin-bottom: 50px;">
+      <div class="header-inner">
+    
+        <a href="index.html" class="logo">
+          <img id="logo" src="assets/img/logotip.png" alt="Фэнтези букет">
+        </a>
+    
+    
+    
+        <div class="header-icons">
+    
+      <!-- Избранное -->
+      <button class="icon-btn favorite-header" aria-label="Избранное" onclick="location.href='favorites.html'">
+      <svg viewBox="0 0 24 24" class="icon">
+        <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+      </svg>
+      <span class="favorite-count">0</span>
+    </button>
+    
+      <!-- Корзина -->
+      <button class="icon-btn cart" aria-label="Корзина">
+        <svg viewBox="0 0 24 24" class="icon">
+          <circle cx="9" cy="21" r="1.5"></circle>
+          <circle cx="18" cy="21" r="1.5"></circle>
+          <path d="M2 2h3l2.5 12h11l2-8H6"></path>
+        </svg>
+        <span class="cart-count">0</span>
+      </button>
+    
+    </div>
+    
+      </div>
+    </header>
+    
+    
+    <!-- Секция поиска и категории -->
+     <section id="search-scroll" class="search-section" aria-label="Поиск и фильтр товаров">
+      <input type="search" class="search-input" id="search" placeholder="Поиск по товарам..." aria-label="Поле для поиска по товарам" />
+    
+      <div id="category-tabs" role="tablist" aria-label="Выбор категории товара" class="category-tabs">
+    
+        <button role="tab" aria-selected="true" data-category="all"
+            id="tab-all" tabindex="0" class="tab-button">
+            Все категории
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="hot"
+            id="tab-hot" tabindex="-1" class="tab-button">
+            Горячие товары
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="men"
+            id="tab-men" tabindex="-1" class="tab-button">
+            Мужские букеты
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="nuts"
+            id="tab-nuts" tabindex="-1" class="tab-button">
+            Букеты из орехов и сухофруктов
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="seafood"
+            id="tab-seafood" tabindex="-1" class="tab-button">
+            Букеты из раков и морепродуктов
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="fruits"
+            id="tab-fruits" tabindex="-1" class="tab-button">
+            Фруктовые букеты
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="berries"
+            id="tab-berries" tabindex="-1" class="tab-button">
+            Букеты из клубники и ягод
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="sweets"
+            id="tab-sweets" tabindex="-1" class="tab-button">
+            Сладкие букеты из конфет
+        </button>
+    
+        <button role="tab" aria-selected="false" data-category="baskets"
+            id="tab-baskets" tabindex="-1" class="tab-button">
+            Съедобные корзины
+        </button>
+    
+    </div>
+    
+    </section>
+    <main class="main">
+    
+    
+    
+      <!-- Горячие товары -->
+      <section id="hot-products" class="products-section" aria-label="Горячие товары">
+        <h2 class="section-title scroll-top"><span class="fire">🔥</span> Горячие товары</h2>
+        <div class="products-grid">
+    
+          <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-2" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-3" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-4" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-5" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-6" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-7" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-8" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-9" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-10" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-11" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-12" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-old">700 ₽</span>
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+    
+        </div>
+      </section>
+    
+      <!-- Мужские букеты -->
+      <section id="men-products" class="products-section" aria-label="Мужские букеты">
+        <h2>👔 Мужские букеты</h2>
+        <div class="products-grid">
+    
+           <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+            <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+    
+        </div>
+      </section>
+    
+      <!-- Букеты из орехов и сухофруктов -->
+      <section id="nuts-products" class="products-section" aria-label="Букеты из орехов и сухофруктов">
+        <h2>🌰 Букеты из орехов и сухофруктов</h2>
+        <div class="products-grid">
+    
+    
+         <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    
+        </div>
+      </section>
+    
+      <!-- Букеты из раков и морепродуктов -->
+      <section id="seafood-products" class="products-section" aria-label="Букеты из раков и морепродуктов">
+        <h2>🦞 Букеты из раков и морепродуктов</h2>
+        <div class="products-grid">
+    
+    
+         <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+        </div>
+      </section>
+    
+    
+      <!-- Фруктовые букеты -->
+      <section id="fruits-products" class="products-section" aria-label="Фруктовые букеты">
+        <h2>🍎 Фруктовые букеты</h2>
+        <div class="products-grid">
+    
+    
+         <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+        </div>
+      </section>
+    
+      <!-- Букеты из клубники и ягод -->
+      <section id="berries-products" class="products-section" aria-label="Букеты из клубники и ягод">
+        <h2>🍓 Букеты из клубники и ягод</h2>
+        <div class="products-grid">
+    
+    
+         <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+        </div>
+      </section>
+    
+    
+      <!-- Сладкие букеты из конфет -->
+      <section id="sweets-products" class="products-section" aria-label="Сладкие букеты из конфет">
+        <h2>🍬 Сладкие букеты из конфет</h2>
+        <div class="products-grid">
+    
+    
+         <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+     <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+        </div>
+      </section>
+    
+    
+      <!-- Съедобные корзины -->
+      <section id="baskets-products" class="products-section" aria-label="Съедобные корзины">
+        <h2>🥗 Съедобные корзины</h2>
+        <div class="products-grid">
+    
+    
+         <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    <!-- Пример карточки товара -->
+    <div class="product-card scroll-bottom" aria-label="Клубника в шоколаде №1" data-id="product-1" style="position: relative;">
+      <div class="product_delete">
+    
+        <div class="image-wrapper">
+          <img src="assets/img/fon.png" alt="Клубника в шоколаде №1" class="img-main" data-thumb="assets/img/fon.png"/>
+          <img src="assets/img/zadniy.png" alt="Клубника в шоколаде №1" class="img-hover" />
+        </div>
+    
+        <div class="product-info">
+          <div class="product-name">Клубника в шоколаде №1</div>
+          <div class="product-price">
+            <span class="price-current">500 ₽</span>
+          </div>
+        </div>
+    
+      </div>
+    
+      <div class="product-footer">
+        <button class="buy-button">В корзину</button>
+      </div>
+      <button class="icon-btn favorite" aria-label="Избранное" style="position: absolute; top: 0px; right: 0px;">
+          <svg viewBox="0 0 24 24" class="icon" width="20" height="20">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+        </button>
+    </div>
+    
+    
+        </div>
+      </section>
+    
+    </main>
+    
+    <button id="scrollTopBtn" title="Наверх">⬆</button>
+    <button id="contactBtn" title="Контакты">💬</button>
+    <!-- Подвал сайта -->
+    <footer style="background-color: var(--color-white); padding: 20px 30px; text-align: center; box-shadow: 0 -1px 6px var(--color-shadow); margin-top: 40px;">
+     <section id="contacts">
+      <h2>Контакты</h2>
+    
+      <div class="contacts-container">
+    
+        <!-- Карта -->
+        <div class="contacts-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.8451298456!2d37.62039361593123!3d55.75582698055419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab5b7c1edb1f7%3A0x9c0d45cf8b0c1eeb!2z0JrQsNC60YHRgtCw0Y8g0LrQsNGB0YLQtdC90YHRjNC60LAsIDEwMDAwMA!5e0!3m2!1sru!2sru!4v1699999999999!5m2!1sru!2sru"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+    
+        <!-- Контакты -->
+        <div class="contacts-info">
+    
+          <!-- Мессенджеры -->
+          <div class="messengers">
+            <a href="https://t.me/example" target="_blank" class="messenger-btn telegram">Telegram</a>
+            <a href="https://wa.me/123456789" target="_blank" class="messenger-btn whatsapp">WhatsApp</a>
+            <a href="https://instagram.com/example" target="_blank" class="messenger-btn instagram">Instagram</a>
+          </div>
+    
+          <!-- Контактная информация -->
+          <div class="contact-card">
+            <p><strong>Адрес:</strong> ул. Примерная, 10, Москва</p>
+            <p><strong>Email:</strong> info@example.com</p>
+            <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+      <p>&copy; 2026 Клубника в шоколаде. Все права защищены.</p>
+    </footer>
+    </div>
+    
+    
+    
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+      const headerBtn = document.querySelector(".favorite-header");
+    
+      /* =========================
+         ВОССТАНОВЛЕНИЕ СОСТОЯНИЯ
+      ==========================*/
+      document.querySelectorAll(".product-card").forEach(card => {
+        const id = card.dataset.id;
+    
+        const isFavorite = favorites.some(item => item.id === id);
+    
+        if (isFavorite) {
+          card.querySelector(".favorite")?.classList.add("active");
+        }
+      });
+    
+      /* =========================
+         СЧЁТЧИК В HEADER
+      ==========================*/
+      function updateCounter() {
+        const counter = document.querySelector(".favorite-count");
+        if (counter) {
+          counter.textContent = favorites.length;
+          counter.style.display = favorites.length ? "flex" : "none";
+        }
+      }
+    
+      /* =========================
+         СОХРАНЕНИЕ
+      ==========================*/
+      function saveFavorites() {
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        updateCounter();
+    
+        if (headerBtn) {
+          headerBtn.classList.add("animate");
+          setTimeout(() => headerBtn.classList.remove("animate"), 300);
+        }
+      }
+    
+      /* =========================
+         КЛИК ПО СЕРДЕЧКУ
+      ==========================*/
+      document.addEventListener("click", function(e) {
+    
+        const favoriteBtn = e.target.closest(".favorite");
+        if (!favoriteBtn) return;
+    
+        const card = favoriteBtn.closest(".product-card");
+        const productId = card.dataset.id;
+    
+        const existing = favorites.find(item => item.id === productId);
+    
+        if (existing) {
+          favorites = favorites.filter(item => item.id !== productId);
+          favoriteBtn.classList.remove("active");
+        } else {
+          favorites.push({
+            id: productId,
+            name: card.querySelector(".product-name")?.innerText || "",
+            price: card.querySelector(".price-current")?.innerText || "",
+            image: card.querySelector(".img-main")?.src || ""
+          });
+          favoriteBtn.classList.add("active");
+        }
+    
+        saveFavorites();
+      });
+    
+      updateCounter();
+    
+    });
+    
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      const logo = document.getElementById("logo"); // ваш логотип
+    
+      const sections = [
+        { id: "hot-products", theme: "theme-begin", logo: "assets/img/logotip.png" },
+        { id: "men-products", theme: "theme-men", logo: "assets/img/men_logo.png" },
+        { id: "nuts-products", theme: "theme-nuts", logo: "assets/img/logo_nuts.png" },
+        { id: "seafood-products", theme: "theme-seafood", logo: "assets/img/logo_sea.png" },
+        { id: "fruits-products", theme: "theme-fruits", logo: "assets/img/logo_fruits.png" },
+        { id: "berries-products", theme: "theme-berries", logo: "assets/img/logotip.png" },
+        { id: "sweets-products", theme: "theme-sweets", logo: "assets/img/logo_sweet.png" },
+        { id: "baskets-products", theme: "theme-baskets", logo: "assets/img/logo_backet.png" }
+      ];
+    
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const theme = entry.target.dataset.theme;
+            const logoSrc = entry.target.dataset.logo;
+    
+            // меняем класс body
+            document.body.className = "";
+            document.body.classList.add(theme);
+    
+            // меняем логотип
+            if (logo && logoSrc) {
+              logo.src = logoSrc;
+            }
+          }
+        });
+      }, { threshold: 0.6 });
+    
+      sections.forEach(section => {
+        const el = document.getElementById(section.id);
+        if (el) {
+          el.dataset.theme = section.theme;
+          el.dataset.logo = section.logo;
+          observer.observe(el);
+        }
+      });
+    
+    });
+    
+     /* =========================
+         Скролл кнопка
+      ==========================*/
+          const scrollBtn = document.getElementById("scrollTopBtn");
+    
+      // Показывать кнопку при прокрутке вниз
+      window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          scrollBtn.style.display = "block";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      };
+    
+      // Скролл наверх при клике
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    
+    
+          const contactBtn = document.getElementById("contactBtn");
+    
+      // Скролл к секции контактов при клике
+      contactBtn.addEventListener("click", () => {
+        const contacts = document.getElementById("contacts");
+        contacts.scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
+    
+
+
+    <script src="assets/js/app.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO -->
+    <meta name="description" content="Краткое описание вашего сайта (до 160 символов)">
+    <meta name="keywords" content="морепродукты, фрукты, орехи, доставка">
+    <meta name="author" content="Название компании">
+    
+    <!-- Индексация -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Цвет темы (для мобильных браузеров) -->
+    <meta name="theme-color" content="#8B5E3C">
+    
+    <!-- Иконка сайта -->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Оптимизация шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title>Фэнтэзи Букет</title>
+</head>
+<body>
+
+    
+    <style>
+    :root {
+      --color-bg: #fff0f5;
+      --color-primary: #d6728a;
+      --color-secondary: #f5c6d0;
+      --color-accent: #a14e66;
+      --color-text: #381931;
+      --color-white: #ffffff;
+      --color-shadow: rgba(56, 25, 49, 0.3);
+      --transition-speed: 0.3s;
+    }
+    
+    body {
+      background: url('assets/img/back.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--color-text);
+      margin: 0;
+    }
+    
+    header.header {
+      margin-bottom: 50px;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-white);
+      box-shadow: 0 5px 15px var(--color-shadow);
+    }
+    
+    header .logo img { height: 50px; }
+    
+    header .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 500;
+      transition: color var(--transition-speed);
+    }
+    
+    header .nav a:hover { color: var(--color-primary); }
+    
+    header .header-icons { display: flex; align-items: center; }
+    
+    header .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 15px;
+      position: relative;
+    }
+    
+    header .icon-btn svg {
+      width: 24px; height: 24px;
+      stroke: var(--color-text);
+      fill: none;
+      stroke-width: 2;
+      transition: all var(--transition-speed);
+    }
+    
+    header .icon-btn span {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 18px; height: 18px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    main.cart-page {
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    main h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--color-primary);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    #cart-items {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-white);
+      padding: 12px 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px var(--color-shadow);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+    
+    .cart-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px var(--color-shadow);
+    }
+    
+    .cart-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    
+    .cart-name { font-weight: 500; margin-bottom: 4px; }
+    .cart-price { font-weight: 600; color: var(--color-accent); }
+    
+    .remove-item {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      transition: transform var(--transition-speed);
+    }
+    
+    .remove-item:hover { transform: scale(1.2); }
+    
+    .cart-summary {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: right;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    
+    .checkout-btn {
+      display: block;
+      margin-top: 20px;
+      padding: 12px 28px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+    }
+    
+    .checkout-btn:hover {
+      background: var(--color-accent);
+    }
+    </style>
+    
+    <header class="header">
+      <a href="index.html" class="logo">
+        <img src="assets/img/logotip.png" alt="Фэнтези букет">
+      </a>
+    
+    
+      <div class="header-icons">
+    
+        <!-- Корзина -->
+        <button class="icon-btn cart" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" class="icon">
+            <circle cx="9" cy="21" r="1.5"></circle>
+            <circle cx="18" cy="21" r="1.5"></circle>
+            <path d="M2 2h3l2.5 12h11l2-8H6"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+    
+    <main class="cart-page">
+      <h1>Корзина</h1>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <strong>Итого: </strong><span id="cart-total">0 ₽</span>
+      </div>
+      <button class="checkout-btn">Оформить заказ</button>
+    </main>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    
+      const cartContainer = document.getElementById("cart-items");
+      const cartTotalEl = document.getElementById("cart-total");
+    
+      let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+    
+      function renderCart() {
+        cartContainer.innerHTML = "";
+    
+        if(cartData.length === 0){
+          cartContainer.innerHTML = "<p>Корзина пуста 🍓</p>";
+          cartTotalEl.textContent = "0 ₽";
+          return;
+        }
+    
+        let total = 0;
+    
+        cartData.forEach((item, index) => {
+          const priceNum = parseFloat(item.price) || 0;
+          total += priceNum;
+    
+          const itemEl = document.createElement("div");
+          itemEl.classList.add("cart-item");
+    
+          itemEl.innerHTML = `
+            <div style="display:flex; align-items:center; gap:10px;">
+              <img src="${item.img}" alt="${item.name}" />
+              <div>
+                <div class="cart-name">${item.name}</div>
+                <div class="cart-price">${item.price} ₽</div>
+              </div>
+            </div>
+            <button class="remove-item" data-index="${index}">❌</button>
+          `;
+    
+          cartContainer.appendChild(itemEl);
+        });
+    
+        cartTotalEl.textContent = total + " ₽";
+        document.querySelector(".cart-count").textContent = cartData.length;
+      }
+    
+      cartContainer.addEventListener("click", function(e){
+        if(e.target.classList.contains("remove-item")){
+          const index = e.target.dataset.index;
+          cartData.splice(index, 1);
+          localStorage.setItem("cart", JSON.stringify(cartData));
+          renderCart();
+        }
+      });
+    
+      renderCart();
+    });
+    </script>
+    
+
+
+    <script src="assets/js/app.min.js"></script>
+
+</body>
+</html>

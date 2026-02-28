@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO -->
+    <meta name="description" content="Краткое описание вашего сайта (до 160 символов)">
+    <meta name="keywords" content="морепродукты, фрукты, орехи, доставка">
+    <meta name="author" content="Название компании">
+    
+    <!-- Индексация -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Цвет темы (для мобильных браузеров) -->
+    <meta name="theme-color" content="#8B5E3C">
+    
+    <!-- Иконка сайта -->
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Оптимизация шрифтов -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title></title>
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <title>Фэнтэзи Букет | Избранное</title>
+    <style>
+    :root {
+      --color-bg: #fff0f5;
+      --color-primary: #d6728a;
+      --color-secondary: #f5c6d0;
+      --color-accent: #a14e66;
+      --color-text: #381931;
+      --color-white: #ffffff;
+      --color-shadow: rgba(56, 25, 49, 0.3);
+      --transition-speed: 0.3s;
+    }
+    
+        body {
+          margin: 0;
+            padding: 0;
+          font-family: 'Montserrat', sans-serif;
+          min-height: 100vh;
+          color: var(--color-text);
+         background: url('assets/img/back.png') no-repeat center center fixed;
+      background-size: cover;
+        }
+    
+    header.header {
+      padding: 20px 40px;
+      background: var(--color-white);
+      box-shadow: 0 5px 15px var(--color-shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    header .logo img {
+      height: 50px;
+        transition: 0.2s linear;
+    }
+    
+    .logo img:hover {
+        opacity: 0.7;
+    }
+    
+    header .nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 500;
+      transition: color var(--transition-speed);
+    }
+    
+    header .nav a:hover {
+      color: var(--color-primary);
+    }
+    
+    header .header-icons {
+      display: flex;
+      align-items: center;
+    }
+    
+    header .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      margin-left: 15px;
+    }
+    
+    header .icon-btn svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--color-text);
+      fill: none;
+      stroke-width: 2;
+      transition: all var(--transition-speed);
+    }
+    
+    header .icon-btn span {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 12px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    main{
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* лёгкая тень для глубины */
+      padding: 40px 20px;
+      margin: 40px auto;
+      max-width: 1200px; /* ограничение по ширине для удобства чтения */
+      position: relative; /* чтобы перекрывать фон */
+      z-index: 10; /* обязательно больше, чем у фона */
+    
+    
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+    
+    .main h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--color-primary);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .favorites-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    
+    .favorite-item {
+      background: var(--color-white);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px var(--color-shadow);
+      overflow: hidden;
+      text-align: center;
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+    
+    .favorite-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px var(--color-shadow);
+    }
+    
+    .favorite-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .favorite-item h3 {
+      margin: 15px 0 5px 0;
+      font-size: 20px;
+      color: var(--color-accent);
+    }
+    
+    .favorite-item p {
+      margin: 0 0 15px 0;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    
+    .favorite-item button {
+      margin-bottom: 15px;
+      padding: 8px 18px;
+      border: 2px solid var(--color-primary);
+      border-radius: 30px;
+      background: var(--color-secondary);
+      color: var(--color-accent);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+    }
+    
+    .favorite-item button:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+    
+    .empty-state {
+      text-align: center;
+      font-size: 20px;
+      color: var(--color-text);
+      margin-top: 80px;
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    <header class="header">
+      <a href="index.html" class="logo">
+          <img src="assets/img/logotip.png" alt="Фэнтези букет">
+        </a>
+    
+    
+    
+      <div class="header-icons">
+      <button class="icon-btn favorite-header" aria-label="Избранное">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21s-6-4.35-9-8.28C-1 7.5 3 3 7.5 6 9 7 12 10 12 10s3-3 4.5-4C21 3 25 7.5 21 12.72 18 16.65 12 21 12 21z"/>
+          </svg>
+          <span class="favorite-count">0</span>
+        </button>
+    
+        <button class="icon-btn cart" aria-label="Корзина">
+          <svg viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1.5"></circle>
+            <circle cx="18" cy="21" r="1.5"></circle>
+            <path d="M2 2h3l2.5 12h11l2-8H6"></path>
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+    
+    
+      </div>
+    </header>
+    
+    <main class="main">
+    <h1>Избранные товары</h1>
+    <div class="favorites-container"></div>
+    </main>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    
+      const container = document.querySelector(".favorites-container");
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    
+      function updateCounter() {
+        const counter = document.querySelector(".favorite-count");
+        if (counter) {
+          counter.textContent = favorites.length;
+          counter.style.display = favorites.length ? "flex" : "none";
+        }
+      }
+    
+      if (favorites.length === 0) {
+        container.innerHTML = "<div class='empty-state'>В избранном пока нет сладких шедевров 🍓</div>";
+        updateCounter();
+        return;
+      }
+    
+      favorites.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "favorite-item";
+        card.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <h3>${item.name}</h3>
+          <p>${item.price}</p>
+          <button>Удалить</button>
+        `;
+    
+        card.querySelector("button").addEventListener("click", () => {
+          favorites = favorites.filter(fav => fav.id !== item.id);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+          location.reload();
+        });
+    
+        container.appendChild(card);
+      });
+    
+      updateCounter();
+    
+    });
+    </script>
+    
+    </body>
+    </html>
+    
+
+
+    <script src="assets/js/app.min.js"></script>
+
+</body>
+</html>
